@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 import 'package:provider/provider.dart';
-import '../../logic/media_controller.dart';
-import '../../data/models/media_item.dart';
+import '../logic/media_controller.dart';
+import '../data/models/media_item.dart';
 
 class MediaScannerScreen extends StatelessWidget {
   const MediaScannerScreen({super.key});
@@ -61,8 +61,8 @@ class MediaScannerScreen extends StatelessWidget {
                               final item = controller.items[index];
                               return ListTile(
                                 leading: const Icon(Icons.album),
-                                title: Text(item.name ?? 'Unbekannt'),
-                                subtitle: Text('GTIN: ${item.gtin}'),
+                                title: Text(item.title ?? 'Unbekannt'),
+                                subtitle: Text('Barcode: ${item.barcode}'),
                               );
                             },
                           ),
