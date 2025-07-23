@@ -1,0 +1,24 @@
+You can find general documentation for Flutter at: <https://docs.flutter.dev/>
+Detailed API documentation is available at: <https://api.flutter.dev/>
+If you prefer video documentation, consider: <https://www.youtube.com/c/flutterdev>
+
+In order to run your application, type:
+
+  $ cd media_scanner
+  $ flutter run
+
+Your application code is in media_scanner\lib\main.dart.
+
+The configured version of Java detected may conflict with the Android Gradle Plugin (AGP) version in your new Flutter app.
+
+To keep the default AGP version 8.7.3, download a compatible Java version
+(Java 17 <= compatible Java version < Java 24). Configure this Java version globally for Flutter by running:
+
+  flutter config --jdk-dir=<JDK_DIRECTORY>
+
+Alternatively, to continue using your current Java version, update the AGP
+version in the following file(s) to a compatible version (minimum compatible AGP version: 7.0):
+    C:\Users\zoeml\OneDrive\Dokumente\GitHub\Scanner_App\media_scanner\android/build.gradle
+
+For details on compatible Java and AGP versions, see
+<https://developer.android.com/build/releases/gradle-plugin>
