@@ -30,8 +30,10 @@ class MediaRepository {
       String? manufacturer;
 
       for (final line in lines) {
-        if (line.startsWith('1 Titel:')) {
-          title = line.replaceFirst('1 Titel:', '').trim();
+        if (line.startsWith('1 Titel:') ||
+            line.startsWith('10 Name:') ||
+            line.startsWith('20 Beschreibung:')) {
+          title ??= line.split(':').last.trim();
         }
         if (line.startsWith('2 Hersteller:')) {
           manufacturer = line.replaceFirst('2 Hersteller:', '').trim();
